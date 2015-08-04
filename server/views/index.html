@@ -1,0 +1,42 @@
+{% extends './layouts/default.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <ul class="menu">
+        <li><a href="{{path.index}}">Downloadify</a></li>
+        <li><a href="{{path.about}}">FileSaver</a></li>
+    </ul>
+
+    <p>Downloadify plugin</p>
+
+    <form>
+		<p>
+			<label for="filename">Filename</label><br />
+			<input type="text" name="filename" value="testfile.txt" id="filename" />
+		</p>
+		<p>
+			<label for="data">File Contents</label><br />
+			<textarea cols="60" rows="10" name="data" id="data">Whatever you put in this text box will be downloaded and saved in the file. If you leave it blank, no file will be downloaded</textarea>
+		</p>
+		<p id="downloadify">
+			You must have Flash 10 installed to download this file.
+		</p>
+	</form>
+
+	<hr>
+
+	<p>FileSaver</p>
+
+    <section xmlns="http://www.w3.org/1999/xhtml" id="text-demo">
+		<h2>Saving text</h2>
+		<textarea class="input" id="text" cols="60" rows="10" placeholder="Once upon a time..."></textarea>
+		<form id="text-options">
+			<label>Filename: <input type="text" class="filename" id="text-filename" placeholder="a plain document" />.txt</label>
+			<input type="submit" value="Save" id="filesaver"/>
+		</form>
+
+		<button id="getdata">Get data and save</button>
+	</section>
+
+{% endblock %}
