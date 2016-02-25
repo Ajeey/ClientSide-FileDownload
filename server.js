@@ -59,6 +59,6 @@ server.register([
     //Start the server
     server.start(function() {
         //Log to the console the host and port info
-        console.log('Server started at: ' + server.info.uri);
+        console.log('Server started at ----: ' + server.info.uri);
     });
 });
